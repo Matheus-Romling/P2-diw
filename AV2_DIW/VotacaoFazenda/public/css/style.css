@@ -1,0 +1,166 @@
+/* paleta de cores: (mais pra eu não me perder e ficar fora de padrão ao decorrer do site)
+#f5d37a - amarelo alaranjado
+#39210f - marrom bonito
+#21180e - marrom escuro
+#b83127 - vermelho alerta
+#f5e8c4 - madeira quase branca
+*/
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #f5e8c4;
+  background-color: #513016;
+  background-image:
+    repeating-linear-gradient(0deg, transparent 0 117px, #2c180c80 118px 121px),
+    repeating-linear-gradient(90deg, transparent 0 7px, #c49a5b0d 8px 9px),
+    linear-gradient(#603b1b, #432712);
+}
+
+h1, h2, .navbar-brand, .nome-fazendeiro, .total-votos {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-weight: 700;
+}
+
+h1, h2, .total-votos {
+  color: #f5d37a;
+}
+
+.navbar {
+  background-color: #39210f;
+  border-bottom: 4px solid #9b7040;
+}
+
+.navbar-brand, .navbar-brand:hover {
+  color: #f5d37a;
+}
+
+.logotipo {
+  object-fit: cover;
+}
+
+.nav-link {
+  font-weight: 800;
+  border-radius: 6px;
+}
+
+.nav-link.active[aria-current] {
+  color: #21180e;
+  background-color: #f5d37a;
+}
+
+.fazendeiro {
+  width: 350px;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 12px solid #9b7040;
+  outline: 4px solid #39210f;
+}
+
+.nome-fazendeiro {
+  color: #21180e;
+  background-color: #f5d37a;
+  transform: rotate(-2deg);
+}
+
+.card, .modal-content {
+  color: #21180e;
+  background-color: #f5e8c4;
+}
+
+.titulo-cartao {
+  color: #21180e;
+}
+
+.boas-vindas {
+  border-radius: 18px;
+}
+
+.btn {
+  font-weight: 800;
+}
+
+.btn-danger {
+  --bs-btn-bg: #b83127;
+  --bs-btn-border-color: #b83127;
+  --bs-btn-hover-bg: #94251e;
+  --bs-btn-hover-border-color: #94251e;
+  --bs-btn-active-bg: #7b201a;
+  --bs-btn-active-border-color: #7b201a;
+  --bs-btn-disabled-bg: #b83127;
+  --bs-btn-disabled-border-color: #b83127;
+}
+
+.bg-danger {
+  background-color: #b83127 !important;
+}
+
+.participante-roca {
+  padding: 4px;
+  color: #f5e8c4;
+  background-color: #2c180c80;
+  border: 2px solid #b83127;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.foto-roca {
+  object-fit: cover;
+}
+
+.cartaz {
+  border: 4px solid #b83127;
+  padding: 8px;
+}
+
+.card-img-top {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.selo-roca {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  transform: rotate(5deg);
+}
+
+.cartao-peao {
+  padding: 4px;
+  border: 0;
+  background-color: #e1d6bf;
+}
+
+.nome-peao {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.texto-suave, footer {
+  color: #d5bd95;
+}
+
+.foto-resultado {
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+.progress {
+  height: 22px;
+  background-color: #d5c8a6;
+  border-radius: 20px;
+}
+
+.barra-votos {
+  background-color: #6b4423;
+  border-radius: 20px;
+}
+
+.mais-votado {
+  outline: 4px solid #b83127;
+  outline-offset: -4px;
+}
+
+.barra-mais-votado {
+  background-color: #b83127;
+  border-radius: 20px;
+}

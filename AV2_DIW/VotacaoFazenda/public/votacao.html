@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR" lang="pt-BR">
+<head>
+  <meta charset="UTF-8" charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Votação</title>
+  <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="lib/bootstrap/bootstrap.bundle.min.js" defer></script>
+  <script src="js/api.js" defer></script>
+  <script src="js/votacao.js" defer></script>
+</head>
+<body class="d-flex flex-column min-vh-100">
+  <div>
+    <div class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+          <img class="logotipo rounded" src="img/logo-fazenda.jpg" alt="erro" width="76" height="56">
+          <span>Votação 2026</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Início</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="votacao.html">Votar</a></li>
+            <li class="nav-item"><a class="nav-link" href="resultado.html">Resultado</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container flex-grow-1 py-5">
+    <h1>Quem você quer eliminar?</h1>
+    <p class="fs-5 mb-4">Cada clique conta um voto para tirar o peão da fazenda.</p>
+    <div class="alert alert-success d-none" id="mensagem-voto" role="status" aria-live="polite"></div>
+    <p id="mensagem-carregamento" role="status">Carregando participantes...</p>
+
+    <div aria-label="Participantes na roça">
+      <div class="row row-cols-1 row-cols-md-3 g-4" id="participantes-roca"></div>
+    </div>
+
+    <div class="mt-5" aria-labelledby="titulo-demais">
+      <h2 id="titulo-demais">Demais peões</h2>
+      <p class="texto-suave">Fora da roça nesta semana, não podem receber votos.</p>
+      <div class="row row-cols-2 row-cols-sm-3 row-cols-lg-6 g-3" id="demais-participantes"></div>
+    </div>
+
+    <template id="modelo-roca">
+      <div class="col">
+        <div class="card cartaz h-100 shadow">
+          <span class="badge bg-danger selo-roca position-absolute top-0 end-0 m-2">Na roça</span>
+          <img class="card-img-top" src="" alt="erro">
+          <div class="card-body text-center d-flex flex-column">
+            <h2 class="card-title titulo-cartao h4 mb-3"></h2>
+            <button class="btn btn-danger w-100 mt-auto" type="button">Votar para eliminar</button>
+          </div>
+        </div>
+      </div>
+    </template>
+    <template id="modelo-demais">
+      <div class="col">
+        <div class="card cartao-peao h-100">
+          <img class="card-img-top" src="" alt="erro" loading="lazy">
+          <div class="card-body p-2 text-center">
+            <h3 class="card-title nome-peao fs-6 mb-0"></h3>
+          </div>
+        </div>
+      </div>
+    </template>
+  </div>
+</body>
+</html>
